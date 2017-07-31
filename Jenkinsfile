@@ -10,8 +10,6 @@ pipeline {
     post {
         always {
             echo 'One way or another, I have finished'
-            archive 'build/libs/**/*.jar'
-            junit 'build/reports/**/*.xml'
             deleteDir() /* clean up our workspace */
         }
         success {
